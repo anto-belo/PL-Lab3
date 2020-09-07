@@ -11,6 +11,6 @@ int main() {
         if(length % 2 != 0 && i == length / 2) continue;
         printf("%c", s[i]);
     }
-
+ 
     return 0;
 }
