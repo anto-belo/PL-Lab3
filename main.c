@@ -7,10 +7,12 @@ int main() {
     gets(s);
 
     int length = strlen(s);
-    for (int i = 0; i < length; i++) {
-        if(length % 2 != 0 && i == length / 2) continue;
-        printf("%c", s[i]);
+    if (length % 2 != 0) {
+        for (int i = length / 2; i < length - 1; i++)
+            s[i] = s[i + 1];
+        s[length - 1] = '\0';
     }
- 
+    puts(s);
+
     return 0;
 }
